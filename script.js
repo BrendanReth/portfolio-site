@@ -12,8 +12,6 @@ function togglePanel(title, description) {
         "----------------------------------------",
         description,
         "----------------------------------------",
-        "[+] Analysis complete",
-        "[✓] Ready for next target"
     ];
 
     let i = 0;
