@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brendan Retherford | Cybersecurity Portfolio</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="nav-logo">
+        Brendan Retherford
+    </div>
+
+    <div class="nav-links">
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+</nav>
+
+<!-- FRAME -->
+<div class="frame">
+
+    <div class="layout">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+            <h1>Brendan Retherford</h1>
+
+            <p class="typing-text" id="typingText"></p>
+
+            <p class="intro">
+                Cybersecurity student focused on networking,
+                digital forensics, Linux systems,
+                and secure infrastructure design.
+            </p>
+
+            <a href="/static/resume.pdf" download class="resume-btn">
+                Download Resume
+            </a>
+
+            <h2>Certifications</h2>
+            <p class="intro">
+                Security+<br>
+                Network+<br>
+                (Add More Here)
+            </p>
+
+            <h2 id="contact">Contact Information</h2>
+            <p class="intro">
+                Email: your@email.com<br><br>
+                GitHub: github.com/yourprofile<br><br>
+                LinkedIn: linkedin.com/in/yourprofile
+            </p>
+
+        </div>
+
+        <!-- CENTER CONTENT -->
+        <div class="content">
+
+            <!-- SKILLS -->
+            <div class="section" id="skills">
+
+                <h2>Technical Skills</h2>
+
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+                        <h3>Security</h3>
+                        <ul>
+                            <li>Vulnerability Analysis</li>
+                            <li>Digital Forensics</li>
+                            <li>Incident Response</li>
+                            <li>SIEM Fundamentals</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Networking</h3>
+                        <ul>
+                            <li>VLANs</li>
+                            <li>VPNs</li>
+                            <li>TCP/IP</li>
+                            <li>Firewall Rules</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Systems</h3>
+                        <ul>
+                            <li>Linux</li>
+                            <li>Ubuntu Server</li>
+                            <li>Windows</li>
+                            <li>Virtual Machines</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Tools</h3>
+                        <ul>
+                            <li>Wireshark</li>
+                            <li>Nmap</li>
+                            <li>Kali Linux</li>
+                            <li>Ghidra</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PROJECTS -->
+            <div class="section" id="projects">
+
+                <h2>Projects & Labs</h2>
+
+                <div class="card"
+                    onmouseenter="togglePanel(
+                        'Ghidra Malware Analysis Lab',
+                        'Performed static reverse engineering of a ransomware sample in a controlled lab environment using Ghidra. Identified encryption routines, binary structure, and potential persistence mechanisms. Documented defensive detection and mitigation strategies.'
+                    )">
+
+                    <h3>Ghidra Malware Analysis Lab</h3>
+                    <p>Reverse engineering ransomware using Ghidra in a controlled lab environment.</p>
+
+                    <div class="expanded-info">
+                        <p>
+                            Static analysis of ransomware using Ghidra.
+                            Identified encryption workflow, function calls,
+                            and defensive indicators of compromise.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="card"
+                    onmouseenter="togglePanel(
+                        'Network Design Project',
+                        'Designed redundant firewall architecture, VLAN segmentation, secure remote access, IPv4/IPv6 evaluation, and high availability planning for a simulated enterprise environment.'
+                    )">
+
+                    <h3>Network Design Project</h3>
+                    <p>Enterprise topology with VPN and firewall planning.</p>
+
+                    <div class="expanded-info">
+                        <p>
+                            Designed enterprise network architecture with redundancy,
+                            segmentation, secure remote access, and scalable IP design.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="card"
+                    onmouseenter="togglePanel(
+                        'Pac-Man Python Project',
+                        'Built a multi-file Python game using OOP, custom maze generation, collision logic, sprite handling, and game loop systems.'
+                    )">
+
+                    <h3>Pac-Man Python Project</h3>
+                    <p>Custom maze and multi-file Python implementation.</p>
+
+                    <div class="expanded-info">
+                        <p>
+                            Built using object-oriented Python with game loop logic,
+                            sprite movement, collision detection, and custom map design.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="card"
+                    onmouseenter="togglePanel(
+                        'Digital Forensics Labs',
+                        'Performed forensic analysis using Linux tools including file carving, metadata extraction, steganography detection, and evidence preservation techniques.'
+                    )">
+
+                    <h3>Digital Forensics Labs</h3>
+                    <p>USB analysis, steganography, and evidence handling.</p>
+
+                    <div class="expanded-info">
+                        <p>
+                            Investigated removable media using forensic tools,
+                            identifying hidden data, metadata artifacts, and compromised files.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="card"
+                    onmouseenter="togglePanel(
+                        'Spring4Shell Vulnerability Lab',
+                        'Analyzed CVE-2022-22965 in a sandbox environment, identifying vulnerable endpoints, testing exploitation paths, and documenting mitigation steps.'
+                    )">
+
+                    <h3>Spring4Shell Vulnerability Lab</h3>
+                    <p>Exploit analysis and mitigation testing.</p>
+
+                    <div class="expanded-info">
+                        <p>
+                            Evaluated Spring4Shell vulnerability behavior,
+                            tested exploit paths, and implemented mitigation strategies.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- EXPERIENCE -->
+            <div class="section">
+
+                <h2>Experience</h2>
+
+                <div class="card"
+                    onmouseenter="togglePanel(
+                        'Experience',
+                        'Hands-on cybersecurity experience through labs involving Linux administration, network defense, digital forensics, vulnerability analysis, and secure system design.'
+                    )">
+
+                    <p>
+                        Building experience through cybersecurity coursework and labs.
+                    </p>
+
+                    <div class="expanded-info">
+                        <p>
+                            Practical experience in Linux systems, networking,
+                            vulnerability analysis, and defensive security operations.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- EDUCATION -->
+            <div class="section" id="education">
+
+                <h2>Education</h2>
+
+                <div class="card"
+                    onmouseenter="togglePanel(
+                        'Education',
+                        'AAS in Information Technology with emphasis in Cyber Defender. Focused on networking, Linux systems, digital forensics, and cybersecurity operations.'
+                    )">
+
+                    <p>
+                        AAS in Information Technology - Cyber Defender
+                    </p>
+
+                    <p>
+                        Spokane Falls Community College
+                    </p>
+
+                    <div class="expanded-info">
+                        <p>
+                            Coursework in networking, Linux administration,
+                            cybersecurity operations, and digital forensics.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT TERMINAL PANEL -->
+        <div class="right-panel">
+
+            <div class="terminal-header">
+                <span>● ● ●</span>
+                <p>SECURITY ANALYSIS TERMINAL</p>
+            </div>
+
+            <pre id="terminalOutput">
+[ idle ]
+Hover over a project to begin analysis...
+            </pre>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>Brendan Retherford | Cybersecurity Portfolio</p>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
