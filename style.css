@@ -52,6 +52,14 @@ body {
     border-right: 2px solid rgba(255,255,255,0.15);
     padding-right: 20px;
 }
+.sidebar a {
+    color: #4da3ff;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
 
 /* CONTENT */
 
